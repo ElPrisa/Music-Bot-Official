@@ -5,7 +5,8 @@ const discord = require("discord.js")
 const client = new discord.Client({ disableEveryone: true, disabledEvents: ['TYPING_START'] })
 const { readdirSync } = require("fs")
 const { join } = require("path")
-const { TOKEN, PREFIX } = require("./config.json")
+const TOKEN = process.env.BOT_TOKEN;
+const PREFIX = process.env.PREFIX;
 
 client.login(TOKEN)
 client.commands = new discord.Collection()

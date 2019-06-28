@@ -1,6 +1,6 @@
 const { Util } = require("discord.js")
 const { play } = require("../include/play")
-const { YOUTUBE_API_KEY } = require("../config.json")
+let YOUTUBE_API_KEY = process.env.YOUTUBE_API;
 const ytdl = require("ytdl-core")
 const YouTubeAPI = require("simple-youtube-api")
 const youtube = new YouTubeAPI(YOUTUBE_API_KEY)

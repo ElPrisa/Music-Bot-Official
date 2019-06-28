@@ -1,5 +1,5 @@
 const { play } = require("../include/play")
-const { YOUTUBE_API_KEY } = require("../config.json")
+let YOUTUBE_API_KEY = process.env.YOUTUBE_API;
 const YouTubeAPI = require("simple-youtube-api")
 const youtube = new YouTubeAPI(YOUTUBE_API_KEY)
 
